@@ -1,0 +1,23 @@
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+pydantic
+
+# Computer Vision
+opencv-python
+numpy
+
+# YOLO
+ultralytics
+
+# ML
+scikit-learn
+scipy
+pandas
+
+# HTTP
+requests
+
+# Database
+SQLAlchemy

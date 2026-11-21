@@ -1,0 +1,51 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+myenv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies
+node_modules/
+dist/
+
+# Datasets
+VanNetraDataset/
+VanNetraDatasetV3/
+datasets/
+data/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# Temporary and build files
+.tmp/
+*.tsbuildinfo
+
+# Trained model weights
+*.pt
+*.pth
+*.onnx
+
+
+# Evaluation outputs and dataset-derived images
+runs/
+**/runs/
+linkedin_evidence/
+
+# Local environment snapshots
+requirements-full.txt
