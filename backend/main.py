@@ -1,4 +1,4 @@
-import sqlite3
+﻿import sqlite3
 from datetime import datetime
 from pathlib import Path
 from typing import Optional, List
@@ -17,14 +17,14 @@ sys.path.append(os.path.dirname(__file__))
 # APP
 # ============================================================
 app = FastAPI(
-    title="Van Netra – Wildlife Intelligence Backend",
+    title="Van Netra â€“ Wildlife Intelligence Backend",
     description="Computer vision backend for Pench Tiger Reserve",
     version="0.3.0",
 )
 
 # Serve evaluation PNGs at /static/evaluation/<filename>
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-EVALUATION_DIR = PROJECT_ROOT / "runs" / "evaluation" / "van_netra_v2_test"
+EVALUATION_DIR = PROJECT_ROOT / "backend" / "static" / "evaluation"
 if not EVALUATION_DIR.is_dir():
     raise RuntimeError(f"Evaluation directory not found: {EVALUATION_DIR}")
 app.mount(
@@ -83,7 +83,7 @@ def db_connection():
 def root():
     return {
         "status": "online",
-        "service": "Van Netra – Wildlife Intelligence Backend",
+        "service": "Van Netra â€“ Wildlife Intelligence Backend",
         "version": "0.3.0",
     }
 
@@ -104,7 +104,7 @@ async def detect_tiger(
     image_bytes = await file.read()
     detector = get_detector()
     result = detector.detect(image_bytes)
-    # Simplified detection handling – persist if tiger detected
+    # Simplified detection handling â€“ persist if tiger detected
     if result.get("scene") and any(d["class"] == "tiger" for d in result.get("detections", [])):
         conn = db_connection()
         try:
@@ -255,7 +255,7 @@ def patch_review(review_id: int, payload: ReviewUpdate):
 
 @app.get("/api/model-performance")
 def model_performance():
-    # Static evaluation results – files are served via /static/evaluation
+    # Static evaluation results â€“ files are served via /static/evaluation
     graphs = [
         "BoxF1_curve.png",
         "BoxPR_curve.png",
@@ -287,4 +287,5 @@ def model_performance():
         "graphs": graphs,
         "note": "Evaluation metrics for Van Netra V2 test set.",
     }
+
 

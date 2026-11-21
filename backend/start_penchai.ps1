@@ -1,4 +1,4 @@
-$ErrorActionPreference = "Stop"
+﻿$ErrorActionPreference = "Stop"
 
 $BACKEND  = $PSScriptRoot
 $ROOT     = Split-Path -Parent $BACKEND
@@ -49,7 +49,7 @@ Write-Host "[2/3] Starting Van Netra backend..."
 Start-Process powershell -ArgumentList `
     "-NoExit",
     "-Command",
-    "`$env:YOLO_CONFIG_DIR='$YOLO_DIR'; Set-Location '$BACKEND'; & '$PYTHON' -m uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
+    "`$env:YOLO_CONFIG_DIR='$YOLO_DIR'; Set-Location '$ROOT'; & '$PYTHON' -m uvicorn backend.main:app --host 127.0.0.1 --port 8001 --reload"
 
 Start-Sleep -Seconds 5
 
@@ -58,21 +58,25 @@ Write-Host "[3/3] Starting Van Netra frontend..."
 Start-Process powershell -ArgumentList `
     "-NoExit",
     "-Command",
-    "Set-Location '$FRONTEND'; npm run dev"
+    "Set-Location '$FRONTEND'; npm run dev -- --port 5174 --strictPort"
 
 Start-Sleep -Seconds 6
 
 Write-Host "Opening Van Netra..."
-Start-Process "http://localhost:5173"
+Start-Process "http://localhost:5174"
 
 Write-Host ""
 Write-Host "========================================="
 Write-Host "        VAN NETRA  -  RUNNING"
 Write-Host "========================================="
 Write-Host ""
-Write-Host "Frontend: http://localhost:5173"
-Write-Host "Backend:  http://127.0.0.1:8000"
-Write-Host "API Docs: http://127.0.0.1:8000/docs"
+Write-Host "Frontend: http://localhost:5174"
+Write-Host "Backend:  http://127.0.0.1:8001"
+Write-Host "API Docs: http://127.0.0.1:8001/docs"
 Write-Host ""
 Write-Host "DO NOT CLOSE THE TWO TERMINAL WINDOWS."
 Write-Host ""
+
+
+
+
