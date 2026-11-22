@@ -24,9 +24,7 @@ The application brings together a computer-vision pipeline and a web-based intel
 
 ## Application Preview
 
-<p align="center">
-  ![Van Netra AI intelligence dashboard showing detection records, tiger detections, camera stations, alerts and activity analytics](docs/screenshots/dashboard.jpg)
-</p>
+![Van Netra AI intelligence dashboard showing detection records, tiger detections, camera stations, alerts and activity analytics](docs/screenshots/dashboard.jpg)
 <p align="center"><em>Intelligence dashboard — monitoring summary, camera-trap activity, alerts and registered tiger records.</em></p>
 
 ## Key Features
@@ -45,30 +43,22 @@ The application brings together a computer-vision pipeline and a web-based intel
 
 ### 1. Camera-Trap Image Processing
 
-<p align="center">
-  ![Van Netra AI image processing page showing image import, inference controls and a tiger detection result](docs/screenshots/image-processing.jpg)
-</p>
+![Van Netra AI image processing page showing image import, inference controls and a tiger detection result](docs/screenshots/image-processing.jpg)
 <p align="center"><em>Image processing interface with an example detection result.</em></p>
 
 ### 2. Individual Tiger Registry
 
-<p align="center">
-  ![Van Netra AI individual tiger database and registry](docs/screenshots/tiger-registry.jpg)
-</p>
+![Van Netra AI individual tiger database and registry](docs/screenshots/tiger-registry.jpg)
 <p align="center"><em>Tiger registry with individual record identifiers and profile access.</em></p>
 
 ### 3. Movement & Occupancy Map
 
-<p align="center">
-  ![Van Netra AI movement and occupancy map showing camera stations, sightings and corridors](docs/screenshots/movement-map.jpg)
-</p>
+![Van Netra AI movement and occupancy map showing camera stations, sightings and corridors](docs/screenshots/movement-map.jpg)
 <p align="center"><em>Geospatial view of camera stations, geotagged sightings and mapped corridors.</em></p>
 
 ### 4. Model Performance
 
-<p align="center">
-  ![Van Netra AI model evaluation dashboard with precision, recall and mAP metrics](docs/screenshots/model-performance.jpg)
-</p>
+![Van Netra AI model evaluation dashboard with precision, recall and mAP metrics](docs/screenshots/model-performance.jpg)
 <p align="center"><em>Model evaluation dashboard. The displayed values correspond to the evaluation view captured from this project build.</em></p>
 
 ## Technology Stack
