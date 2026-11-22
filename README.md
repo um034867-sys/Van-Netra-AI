@@ -43,7 +43,7 @@ The application brings together a computer-vision pipeline and a web-based intel
 
 ### 1. Camera-Trap Image Processing
 
-![Van Netra AI image processing page showing image import, inference controls and a tiger detection result](docs/screenshots/image-processing.jpg)
+![Van Netra AI image processing page showing image import, inference controls and a tiger detection result]("C:\Users\Lenovo\Downloads\image-processing.jpg.jpeg")
 <p align="center"><em>Image processing interface with an example detection result.</em></p>
 
 ### 2. Individual Tiger Registry
